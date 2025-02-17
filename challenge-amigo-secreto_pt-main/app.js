@@ -60,6 +60,12 @@ function sortearAmigo() {
     // Mostrar o resultado  
     const resultadoElement = document.getElementById('resultado');  
     resultadoElement.innerHTML = `Amigo secreto sorteado: <strong>${amigoSorteado}</strong>`;  
+    
+    // Remover o amigo sorteado do array para que não seja sorteado novamente  
+    amigos.splice(indiceAleatorio, 1);   
+    
+    // Atualizar a lista de amigos  
+    atualizarLista();  
 }  
 
 // Executa a função sortearAmigo quando o botão for clicado  
